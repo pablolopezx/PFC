@@ -4,6 +4,7 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import SignOut from "./SignOut";
 import { AuthContext } from "./AuthContext";
+import logo from "../logo.png"
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
@@ -21,7 +22,9 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark" style={{ background: "rgba(0, 94, 164, 0.99)" }}>
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Icono
+          <div className="d-flex align-items-center">
+            <img src={logo} alt="Logo" className="logo-img" style={{ maxHeight: "80px" }} />
+          </div>
         </Link>
         <button
           className="navbar-toggler"
