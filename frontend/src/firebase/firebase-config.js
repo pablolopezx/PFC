@@ -23,4 +23,4 @@ const analytics = getAnalytics(app);
 // Obtiene el objeto 'auth' de Firebase
 const auth = getAuth(app);
 
-export { auth }; // Exporta el objeto 'auth' para que otros archivos puedan importarlo
+export { auth, analytics }; // Exporta el objeto 'auth' para que otros archivos puedan importarlo

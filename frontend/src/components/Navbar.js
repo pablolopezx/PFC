@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import SignIn from "./SignIn";
-import SignUp from "./SignUp";
 import SignOut from "./SignOut";
+import SignUp from "./SignUp";
 import { AuthContext } from "./AuthContext";
 import logo from "../logo.png"
 
@@ -40,12 +40,12 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/videos">
+              <Link className="nav-link" to="/plantillas">
                 Plantillas
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/videos">
+              <Link className="nav-link" to="/Simulador">
                 Simulador
               </Link>
             </li>
@@ -54,7 +54,7 @@ const Navbar = () => {
             <li className="nav-item ml-auto">
               {user ? (
                 <div className="d-flex">
-                  <Link className="nav-link" onClick={"#"}>Perfil</Link>
+                  <Link className="nav-link" to="/perfil">Perfil</Link>
                   <SignOut handleCloseModal={handleCloseSignOutModal} />
                 </div>
               ) : (
