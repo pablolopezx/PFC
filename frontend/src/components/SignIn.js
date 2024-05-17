@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { Modal, Button, Form, FormControl, FormGroup } from "react-bootstrap";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
 import { Link } from "react-router-dom";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-
 
 const SignIn = ({ handleCloseModal }) => {
   const [showModal, setShowModal] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // Nuevo estado para manejar errores de inicio de sesión
+  const [error, setError] = useState(""); 
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -28,10 +26,10 @@ const SignIn = ({ handleCloseModal }) => {
         password
       );
       console.log("Usuario ingresado:", userCredential.user);
-      handleCloseModal(); // Cerrar el modal después de iniciar sesión
+      handleCloseModal(); 
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
-      setError(error.message); // Actualizar el estado del error
+      setError(error.message); 
     }
   };
 
@@ -39,9 +37,8 @@ const SignIn = ({ handleCloseModal }) => {
     try {
       const provider = new GoogleAuthProvider();
       const userCredential = await signInWithPopup(auth, provider);
-      setUser(userCredential.user);
       console.log("Usuario ingresado:", userCredential.user);
-      handleCloseModal(); // Cerrar el modal después de iniciar sesión
+      handleCloseModal(); 
     } catch (error) {
       console.error("Error al iniciar sesión con Google:", error.message);
     }
@@ -86,7 +83,6 @@ const SignIn = ({ handleCloseModal }) => {
           <div className="d-grid gap-2 mb-3 w-100">
             <Button variant="primary" onClick={handleSignIn}>Iniciar sesión</Button>
           </div>
-          {/* Mostrar mensaje de error */}
           {error && <p className="text-danger">{error}</p>}
         </Modal.Footer>
       </Modal>
