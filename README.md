@@ -6,7 +6,9 @@ Esta aplicación web permite a los usuarios simular partidos de fútbol entre di
 Estado del proyecto
 
 Estado del proyecto: Finalizado
+
 Versión del proyecto: 1.0
+
 Licencia del proyecto: Licencia MIT
 
 Características de la Aplicación
@@ -88,4 +90,5 @@ Licencia
 Este proyecto se encuentra bajo la Licencia MIT.
 
 Conclusión
+
 Este proyecto proporciona una plataforma interactiva para simular partidos de fútbol y gestionar equipos y jugadores. Utiliza un stack tecnológico moderno con React en el frontend y Django en el backend, ofreciendo una experiencia de usuario fluida y una lógica robusta del lado del servidor. El diseño modular y el uso de APIs REST permiten una fácil escalabilidad y mantenimiento. 
