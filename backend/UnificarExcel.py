@@ -16,7 +16,7 @@ df3 = pd.read_excel(file3)
 df3['Competicion'] = 'LaLiga Hypermotion'
 
 # Unir los tres DataFrames
-combined_df = pd.concat([df1, df2, df3])
+combined_df = pd.concat([df1, df2, df3]) 
 
 # Eliminar filas duplicadas basadas en la columna 'URL'
 # Asegúrate de reemplazar 'URL' con el nombre exacto de la columna que contiene las URLs en tus archivos

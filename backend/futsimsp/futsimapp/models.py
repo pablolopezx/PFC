@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 class Competicion(models.Model):
     url = models.URLField(unique=True)
     nombre = models.CharField(max_length=255)
