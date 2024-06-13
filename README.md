@@ -34,7 +34,7 @@ Git
 
 Pasos para Ejecutar el Proyecto
 1.-Clona el repositorio
-  git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/pablolopezx/PFC.git)
+  git clone (https://github.com/pablolopezx/PFC.git)
   cd PFC
   
 2.-Configura el Backend:
