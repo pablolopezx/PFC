@@ -33,6 +33,7 @@ Node.js
 Git
 
 Pasos para Ejecutar el Proyecto
+
 1.-Clona el repositorio
   git clone (https://github.com/pablolopezx/PFC.git)
   cd PFC
